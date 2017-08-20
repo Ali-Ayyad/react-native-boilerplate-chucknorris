@@ -1,6 +1,6 @@
 # RNboilerplate
 
-One Paragraph of project description goes here
+A React-native boilerplate with api integration.
 
 ## Getting Started
 ```
