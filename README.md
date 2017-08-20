@@ -9,12 +9,9 @@ react-native link
 ```
 
 ## Authors
-* **Ali Ayyad** - 
+* **Ali Ayyad** 
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-* Great thanks for these guys! https://api.chucknorris.io
+* These guys are awesome! https://api.chucknorris.io
