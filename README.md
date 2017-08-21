@@ -1,6 +1,6 @@
 # RNboilerplate
 
-A React-native boilerplate with api integration.
+A React-native boilerplate with api integration (Chuck Norris facts).
 
 ## Getting Started
 ```
@@ -9,7 +9,7 @@ react-native link
 ```
 
 ## Authors
-* **Ali Ayyad** 
+* **Ali Ayyad**
 
 
 ## Acknowledgments
