@@ -10,8 +10,8 @@ const {width} = Dimensions.get('window');
 module.exports = StyleSheet.create({
   container: {
     backgroundColor:Color.background,
-    justifyContent:'center',
     alignItems:'center',
+    justifyContent:'center',
     padding:10,
     flex:1,
   },

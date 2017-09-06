@@ -11,7 +11,7 @@ module.exports = StyleSheet.create({
   container: {
     justifyContent:'space-between',
     padding:10,
-    flex:1,
+    flexGrow:1,
   },
   jokeContainer:{
     margin:40,
@@ -19,7 +19,6 @@ module.exports = StyleSheet.create({
     borderRadius:10,
     borderColor:Color.white,
     padding:10,
-
   },
   joke:{
     color:Color.main,

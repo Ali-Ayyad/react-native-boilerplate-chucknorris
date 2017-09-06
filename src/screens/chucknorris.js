@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {
   View,
+  ScrollView,
   Text,
   ActivityIndicator,
   Image,
@@ -82,7 +83,7 @@ export default class ChuckNorris extends Component {
   render() {
 
     return (
-      <View style={style.container}>
+      <ScrollView contentContainerStyle={[style.container]}>
         <StatusBar barStyle="light-content"/>
         {this.renderLogo()}
         {this.renderJoke()}
@@ -93,7 +94,7 @@ export default class ChuckNorris extends Component {
           textStyle={{fontWeight:'bold'}}
           onPress={() => this.getJoke()}
         />
-      </View>
+      </ScrollView>
     );
   }
 }
