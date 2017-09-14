@@ -5,7 +5,15 @@ A React-native boilerplate with api integration (Chuck Norris facts).
 ## Getting Started
 ```
 npm install
-react-native link
+```
+## Rename project
+#### Install the Package react-native-rename
+```
+npm install react-native-rename -g
+```
+#### Rename the App
+```
+react-native-rename YourNewApp
 ```
 
 ## Authors
