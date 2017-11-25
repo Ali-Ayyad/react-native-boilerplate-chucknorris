@@ -1,25 +1,26 @@
 let baseUrl = 'https://api.chucknorris.io/';
 
 class APIs {
-
   getUserToken() {
     if (window.RNB_user) {
       return window.RNB_user.token;
     }
   }
 
-  appendParamsString(url, params){
-    if (!params){
-        return url;
+  appendParamsString(url, params) {
+    if (!params) {
+      return url;
     }
-    if (typeof params === 'object'){
+    if (typeof params === 'object') {
       var keys = Object.keys(params);
-      if (!keys || keys.length === 0){
-          return url;
-        }
+      if (!keys || keys.length === 0) {
+        return url;
+      }
       url = url + '?';
-      for (var key of keys){
-        if (params[key]){url = `${url}${key}=${params[key]}&`;}
+      for (var key of keys) {
+        if (params[key]) {
+          url = `${url}${key}=${params[key]}&`;
+        }
       }
     }
     return url;
@@ -41,21 +42,25 @@ class APIs {
       method: 'put',
       headers: this.headers(this.getUserToken()),
       body: JSON.stringify(body || '')
-    }).then(response => {
-      return response.json();
-    }).catch(e => {
-      console.log('catch: ', e);
-    });
+    })
+      .then(response => {
+        return response.json();
+      })
+      .catch(e => {
+        console.log('catch: ', e);
+      });
   }
 
   get(url) {
     return fetch(url, {
       headers: this.headers(this.getUserToken())
-    }).then(response => {
-      return response.json();
-    }).catch(e => {
-      console.log('catch: ', e);
-    });
+    })
+      .then(response => {
+        return response.json();
+      })
+      .catch(e => {
+        console.log('catch: ', e);
+      });
   }
 
   post(url, body = null) {
@@ -63,11 +68,13 @@ class APIs {
       method: 'post',
       headers: this.headers(this.getUserToken()),
       body: JSON.stringify(body || '')
-    }).then(response => {
-      return response.json();
-    }).catch(e => {
-      console.log('catch: ', e);
-    });
+    })
+      .then(response => {
+        return response.json();
+      })
+      .catch(e => {
+        console.log('catch: ', e);
+      });
   }
 
   delete(url, body = null) {
@@ -75,15 +82,18 @@ class APIs {
       method: 'delete',
       headers: this.headers(this.getUserToken()),
       body: JSON.stringify(body || '')
-    }).then(response => {
-      return response.json();
-    }).catch(e => {
-      console.log('catch: ', e);
-    });
+    })
+      .then(response => {
+        return response.json();
+      })
+      .catch(e => {
+        console.log('catch: ', e);
+      });
   }
+
   /* ---------------------- get ChuckNorris ----------------------*/
-  getRandomJoke(){
-    let url =`${baseUrl}jokes/random`;
+  getRandomJoke() {
+    let url = `${baseUrl}jokes/random`;
     return this.get(url);
   }
 }

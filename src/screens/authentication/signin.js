@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import {
-  View,
-  Text
-} from 'react-native';
+import { View, Text } from 'react-native';
 
 import Color from 'constants/colors';
 import style from 'styles/signin';
@@ -13,16 +10,16 @@ const USERNAME = 'Username';
 const PASSWORD = 'Password';
 
 export default class SignIn extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
-      username:'',
-      password:'',
-    }
+      username: '',
+      password: ''
+    };
   }
 
-  signIn(){
-    let {screenProps:{signIn}} = this.props;
+  signIn() {
+    let { screenProps: { signIn } } = this.props;
     signIn();
   }
 
@@ -35,17 +32,29 @@ export default class SignIn extends Component {
           </View>
           <View style={style.formContainer}>
             <FormLabel labelStyle={style.formLabel}>{USERNAME}</FormLabel>
-            <FormInput onChangeText={(value) => {this.setState({username:value})}}/>
+            <FormInput
+              onChangeText={value => {
+                this.setState({ username: value });
+              }}
+            />
 
             <FormLabel labelStyle={style.formLabel}>{PASSWORD}</FormLabel>
-            <FormInput onChangeText={(value) => {this.setState({password:value})}}/>
+            <FormInput
+              onChangeText={value => {
+                this.setState({ password: value });
+              }}
+            />
           </View>
         </View>
-        <Button title={'Lets Start!'}
+        <Button
+          title={'Lets Start!'}
           borderRadius={5}
           backgroundColor={Color.blue}
-          textStyle={{fontWeight:'bold'}}   
-          onPress={() => {this.signIn()}} />
+          textStyle={{ fontWeight: 'bold' }}
+          onPress={() => {
+            this.signIn();
+          }}
+        />
       </View>
     );
   }
